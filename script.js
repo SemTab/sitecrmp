@@ -21,6 +21,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+  const donateOpen = document.getElementById('donate-open');
+  const modal = document.getElementById('modal-donate');
+  const donateClose = document.getElementById('donate-close');
+
+  donateOpen.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  });
+
+  donateClose.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  });
+
+  window.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+});
+
   // Simple carousel
   const carousels = document.querySelectorAll('[data-carousel]');
   carousels.forEach((el) => initCarousel(el));

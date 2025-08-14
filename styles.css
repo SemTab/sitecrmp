@@ -38,6 +38,61 @@ body {
   display: flex; align-items: center; gap: 16px;
   height: 64px;
 }
+.modal-donate {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-donate__content {
+  background: #181c24;
+  color: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  min-width: 320px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  position: relative;
+  font-family: 'Manrope', sans-serif;
+}
+.modal-donate__title {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.modal-donate__form label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.modal-donate__form input,
+.modal-donate__form select {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  background: #23283a;
+  color: #fff;
+  font-size: 1rem;
+}
+.modal-donate__form button {
+  width: 100%;
+  margin-top: 18px;
+}
+.modal-donate__close {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
 .logo { display: inline-flex; align-items: baseline; gap: 6px; text-decoration: none; }
 .logo__mark { font-weight: 800; color: #ffcc33; letter-spacing: .5px; }
 .logo__text { font-weight: 700; color: #ffd866; opacity: .9; }
